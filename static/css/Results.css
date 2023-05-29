@@ -1,0 +1,228 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration:none;
+  box-sizing: border-box;
+}
+
+body
+{
+  font-family: "Poppins", sans-serif;
+}
+
+main {
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  background-color: #021d50;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+  
+.box {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    height: 400px;
+    background-color: #fff;
+    border-radius: 3.3rem;
+    box-shadow: 0 60px 40px -30px rgba(0, 0, 0, 0.27);
+	
+  }
+  
+  .inner-box {
+    position: absolute;
+    width: calc(100% - 4.1rem);
+    height: calc(100% - 4.1rem);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .container{
+      padding: 20px;
+      display: inline-block;
+      justify-content: center;
+      align-items: left;
+      min-height: 100vh;
+	  margin-top:-50px;
+	  margin-bottom:-50px;
+	  margin-left:-50px;
+	  
+	  
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+ .logo img {
+    width: 50px;
+    margin-right: 0.3rem;
+  }
+  
+ .logo h4 {
+    font-size: 1.6rem;
+    margin-top: -9px;
+    letter-spacing: -0.5px;
+    color: white;
+  }
+  .title {
+    color: #f5ab0c;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1;
+    margin-top: 1.5rem;
+    
+    display: inline-block;
+  }
+  
+.content{
+  display: flex;
+  padding: 1.7rem 2.5rem 2.6rem 2.5rem;
+}
+
+.right{
+  padding-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-left: 2.1rem;
+  margin-top: -0.3px;
+}
+.left{
+  padding-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-left: 2.1rem;
+  margin-top: -0.3px;
+  
+}
+
+
+.btn {
+  display: inline-block;
+  padding: 0.9rem 1.9rem;
+  color: #fff !important;
+  background-color:#dfa30a ;
+  border-radius: 16px;
+  text-transform: capitalize;
+  transition: 0.3s;
+  margin-left:40px;
+  height:100px;
+  width:200px;
+  padding:40px;
+}
+
+.btn:hover {
+  background-color: #021d50;
+  /*transform: scale(1) !important;*/
+  color:white;
+  transform: translateY(15px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.max-width{
+    max-width: 1300px;
+    padding:0 80px;
+    margin:auto;
+  
+  
+  }
+ /*navbar styling*/
+  .navbar{
+    position:fixed;
+    width:100%;
+    padding:30px 0;
+    /*background:#dfa30a;*/
+    font-family: 'ubuntu',sans-serif;
+    transition: all 0.3s ease;
+  }
+  .navbar.sticky{
+    padding:10px 0;
+    background:#dfa30a;
+  
+  }
+  .navbar .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  
+  }
+  
+  .navbar .logo a{
+    font-size: 25px;
+    font-weight: 600;
+    color: white;
+  }
+  .navbar .logo a span{
+    color:#dfa30a ;
+    transition: all 0.3s ease;
+  }
+  .navbar.sticky .logo a span{
+    color:white;
+  }
+  .navbar .menu li{
+    list-style: none;
+    display: inline-block;
+  }
+  .navbar .menu li a{
+    color:white;
+    font-size: 25px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color o.3s ease;
+  
+  }
+  .navbar .menu li a:hover{
+    color:#dfa30a;
+  
+  }
+  .navbar.sticky  .menu li a:hover{
+    color:white;
+  }
+  /*menu button */
+  .menu-btn{
+    color:white;
+    font-size:23px;
+    cursor:pointer ;
+    display: none;
+  
+  
+  }
+  
+  /*home section styling*/
+  .home{
+    display: flex;
+    background: #021d50;
+    height:100vh;
+    color:rgb(0, 0, 0);
+    min-height: 500px;
+    font-family: 'ubuntu',sans-serif;
+  
+  }
+  .home .max-width{
+    margin: auto 0 auto 130px ;
+  
+  }
+
+
+
+.text{
+  color: rgb(0, 0, 0);
+  font-weight: 300;
+  line-height: 1.7;
+ 
+  font-weight: 300;
+  font-size: 1rem;
+ 
+  margin-bottom: .9rem;
+  display: inline-block;
+}

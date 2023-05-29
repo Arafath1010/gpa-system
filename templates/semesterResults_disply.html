@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Semester Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/semesterResults_disply.css') }}" />
+    
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <main>
+        <div class="box">
+          <div class="inner-box">
+
+            <div class="logo">
+              <img src="{{ url_for('static', filename='img/aboutPage_img/logo.png') }}" alt="Logo image" />
+                  
+                      <h4>APMAAS SYSTEMS</h4>
+                    </div>
+
+              
+                    
+             <div class="title">
+                <h1>{{Semester}}</h1>
+              </div>
+			  <div class="table-box">
+        <div class="table-row table-head">
+            <div class="table-cell first-cell">
+                <p>Module</p>
+            </div>
+            <div class="table-cell">
+                <p>Grade</p>
+            </div>
+            <div class="table-cell last-cell">
+                <p>Credit</p>
+            </div> 
+        </div>
+
+        {% for result in results%}
+        <div class="table-row">
+            <div class="table-cell first-cell">
+                <p>{{ result.0}}</p>
+            </div>
+            <div class="table-cell">
+                <p>{{ result.1}}</p>
+            </div>
+            <div class="table-cell last-cell">
+                <p>{{ result.2}}</p>
+            </div>   
+        </div>
+        {% endfor%}
+       
+
+
+              
+    
+        <div class="litleBox">
+            <div class="little_inner-box">
+      
+                <p class="little-text">Semester GPA :{{Class}}<br>
+               CGPA : {{credit}}</p>
+          </div>
+          </div>
+
+    
+    </div>
+
+
+</div>
+
+</main>
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

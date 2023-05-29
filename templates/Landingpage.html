@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landing Page </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Landingpage.css') }}" />
+  </head>
+  <body>
+    <main>
+      <div class="big-wrapper light">
+    
+
+        <header>
+          <div class="container">
+      
+            <div class="logo">
+              <img src="{{ url_for('static', filename='img/Landingpage_img/logo.png') }}" alt="Logo" />
+              <h3>APMAAS SYSTEMS</h3>
+            </div>
+
+            <div class="links">
+              <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="/registerpage">register</a></li>
+                <li><a href="/loginpage">login</a></li>
+                <li><a href="/contactPage">Contact</a></li>
+                <li><a href="/teams">Teams</a></li>
+              </ul>
+            </div>
+
+            <div class="overlay"></div>
+
+            <div class="hamburger-menu">
+              <div class="bar"></div>
+            </div>
+
+          </div>
+        </header>
+        
+        <div class="showcase-area">
+          <div class="container">
+            <div class="left">
+              <div class="big-title">
+                <h1>PREDICT WHAT CLASS YOU GET,
+                  
+                AND SET YOUR NEW GOALS !</h1>
+              </div>
+              <p class="text">
+                Academic performance management and analysis system for undergraduate students.Predict what class you get,and set your new goals!Easier than ever.
+              </p>
+              
+            </div>
+
+            <div class="right">
+              <img src="{{ url_for('static', filename='img/Landingpage_img/yperson.png') }}" alt="Person Image" class="person" />
+            </div>
+          </div>
+     </div>
+     </div>
+     </main>
+     <main>
+          
+  </body>
+</html>

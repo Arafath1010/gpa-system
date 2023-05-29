@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<head>
+
+ <title>Table layout</title>
+
+ <link rel="stylesheet" href="{{ url_for('static', filename='css/sugestion.css') }}" />
+
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="max-width">
+
+            <div class="logo">
+                <img src="{{ url_for('static', filename='img/sugestion_display/logo.png') }}" alt="pic missed" />
+                <h4>APMAAS SYSTEMS</h4>
+            </div>
+
+            <ul class="menu">
+                <li><a href="/main_Window">Home</a></li>
+              <li><a href="/aboutPage">About</a></li>
+              <li><a href="/contactPage">Contact</a></li>
+              <li><a href="/teams">Teams</a></li>
+            
+            </ul>
+
+            <div class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+
+        </div>
+    </nav>
+        
+    <main>
+    <div class="box">
+        <div class="inner-box">
+      
+                <div class="title">
+                    <h1>Future Prediction</h1>
+                </div>
+
+               <table >
+               {% for result in next_sem_subjects_v%}
+                <tr> <td>
+                <div>
+                    <h2>{{result}}</h2>
+                </div>
+                </td>
+                <td>
+                <div>
+                    <h2>{{suggest_r}}</h2>
+                </div>
+                </tr>
+                 {% endfor%}
+
+              </table>
+
+                <div class="title">
+                    <h3>{{message_n}}</h3>
+                </div>
+
+
+        
+      
+
+            
+    </div>
+    </div>
+  
+
+</main>  
+      
+   
+ </body>
+
+</html>

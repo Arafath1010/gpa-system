@@ -1,0 +1,268 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body,
+input {
+  font-family: "Poppins", sans-serif;
+}
+
+
+main {
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  background-color: #021d50;
+  padding: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/*navigation styles start*/
+.max-width{
+  max-width: 1300px;
+  padding:0 80px;
+  margin:auto;
+
+
+}
+.logo {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+  
+.logo img {
+  width: 50px;
+  margin-right: 0.6rem;
+  margin-top: -0.6rem;
+}
+
+.logo h4 {
+  font-size: 1.6rem;
+  margin-top: -9px;
+  letter-spacing: -0.5px;
+  color: #ffffff;
+}
+
+
+/*navbar styling*/
+.navbar{
+  position:fixed;
+  width:100%;
+  padding:30px 0;
+  /*background:#dfa30a;*/
+  font-family: 'ubuntu',sans-serif;
+  transition: all 0.3s ease;
+}
+.navbar.sticky{
+  padding:10px 0;
+  background:#dfa30a;
+
+}
+.navbar .max-width{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.navbar .logo a{
+  font-size: 25px;
+  font-weight: 600;
+  color: white;
+}
+.navbar .logo a span{
+  color:#dfa30a ;
+  transition: all 0.3s ease;
+}
+.navbar.sticky .logo a span{
+  color:white;
+}
+.navbar .menu li{
+  list-style: none;
+  display: inline-block;
+}
+.navbar .menu li a{
+  color:white;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-left: 25px;
+  transition: color o.3s ease;
+
+}
+.navbar .menu li a:hover{
+  color:#dfa30a;
+
+}
+.navbar.sticky  .menu li a:hover{
+  color:white;
+}
+/*menu button */
+.menu-btn{
+  color:white;
+  font-size:23px;
+  cursor:pointer ;
+  display: none;
+
+
+}
+
+/*home section styling*/
+.home{
+  display: flex;
+  background: #021d50;
+  height:100vh;
+  color:rgb(0, 0, 0);
+  min-height: 500px;
+  font-family: 'ubuntu',sans-serif;
+
+}
+.home .max-width{
+  margin: auto 0 auto 130px ;
+
+}
+.box {
+  position: relative;
+  width: 100%;
+  max-width: 1150px;
+  min-height: 730px;
+  background-color: #fff;
+  border-radius: 3.3rem;
+  box-shadow: 0 60px 40px -30px rgba(0, 0, 0, 0.27);    
+  margin-top: 90px;
+  margin-left: 20px;
+
+}
+
+.inner-box {
+  position: absolute;
+  width: calc(100% - 4.1rem);
+  height: calc(100% - 4.1rem);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+  section{
+    padding: 100px 0;
+
+  }
+  .container{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+}
+
+.about{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500px;
+    margin-bottom:40px;
+    padding-bottom: -60px;
+    margin-top: -110px;
+
+}
+
+.about .title{
+    position: relative;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 500;
+    margin-bottom: 30px;
+    padding-bottom:6px;
+    color: rgb(10, 16, 114)
+}
+.about .title::before{
+
+    content:"";
+    position: absolute;
+    bottom:0px;
+    left:50%;
+    width: 180px;
+    height: 3px;
+    background: #000000;
+    transform: translateX(-50%);
+}
+
+.about .title::after{
+
+    content:"What APMAAS System is";
+    position: absolute;
+    bottom:-10px;
+    font-size: 10px;
+    color:rgb(255, 206, 29);
+    left:50%;
+    padding:5px;
+    background: rgb(255, 255, 255);
+    transform: translateX(-50%);
+}
+.about .about_content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: spae-between;
+}
+.about .about_content .left {
+
+    width:45%;
+  
+}
+
+
+.about .about_content .left img{
+    height:400px;
+    width:400px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-left: -40%;
+}
+
+.about .about_content .right {
+
+    width:55%;
+  
+}
+
+.about .about_content .right p{
+
+   text-align: justify;
+   margin-right: -60px;
+   margin-left: -10%;
+}
+
+
+
+
+@keyframes appear {
+    0% {
+      clip-path: circle(30% at -25% -25%);
+    }
+    100% {
+      clip-path: circle(150% at 0 0);
+    }
+  }
+  
+
+  @media screen and (max-width: 870px) {
+    .logo h3 {
+        font-size: 1.25rem;
+      }
+  }
+  
+@media screen and (max-width: 470px) {
+    .container {
+      padding: 0 1.5rem;
+    }
+}  

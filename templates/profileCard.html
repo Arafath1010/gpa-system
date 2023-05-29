@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/profileCard.css') }}">
+    <title>Profile Card</title>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="max-width">
+           <div class="logo">
+                    <img src="{{ url_for('static', filename='img/profileCard/logo.png') }}" alt="Logo" />
+                    <h4>APMAAS SYSTEMS</h4>
+                  </div>
+            <ul class="menu">
+                <li><a href="/main_Window">Home</a></li>
+                <li><a href="/aboutPage">About</a></li>
+                <li><a href="/teams">Teams</a></li>
+               
+            </ul>
+            <div class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+
+    
+     <div class="modal">
+        <img src="{{ url_for('static', filename='img/profileCard/profilepic.jpg') }}" alt="">
+        <div class="close"></div>
+    </div>
+    
+    <div class="container">
+        <div class="card">
+            <div class="header">
+                
+                <div class="main">
+                    <div class="image">
+                        <div class="hover">
+                            <i class="fas fa-camera fa-2x"></i>
+                        </div>
+                    </div>
+                    <h3 class="name">{{name}}</h3>
+                    <h3 class="sub-name">{{index}}</h3>
+                </div>
+            </div>
+            
+            
+
+            <div class="content">
+             
+    
+                <div class="left">
+                    <div class="about-container">
+                        
+                        <h3 class="title">Student name:</h3>
+                        <h5 class="text">{{name}}</h5><br>
+                        <h3 class="title">Index No:</h3>
+                        <h5 class="text">{{index}}</h5><br>
+                        <h3 class="title">Department:</h3>
+                        <h5 class="text">{{Department}}</h5><br>
+                        <h3 class="title">Current batch:</h3>
+                        <h5 class="text">{{Currentbatch}}</h5><br>
+                        <h3 class="title">Email address:</h3>
+                        <h5 class="text">{{email}}</h5><br>
+                       
+                    </div>
+               
+            </div>   
+            
+
+                
+            </div>
+        </div>
+    </div>
+    
+    <script src="{{ url_for('static', filename='js/profileCard.js') }}"></script>
+</body>
+</html>

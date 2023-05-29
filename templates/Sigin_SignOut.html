@@ -1,0 +1,245 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign in & Sign up Form</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Signin_SignOut.css') }}" />
+  </head>
+  <body> 
+    
+    <nav class="navbar">
+      <div class="max-width">
+          <div class="logo">
+              <img src="{{ url_for('static', filename='img/Signin_SignOut_img/logo.png') }}" alt="pic missed" />
+              <h3>APMAAS SYSTEMS</h3>
+          </div>
+          <ul class="menu">
+              <li><a href="/main_Window">Home</a></li>
+              <li><a href="/aboutPage">About</a></li>
+              <li><a href="/contactPage">Contact</a></li>
+              <li><a href="/teams">Teams</a></li>
+          
+          </ul>
+          <div class="menu-btn">
+              <i class="fas fa-bars"></i>
+          </div>
+      </div>
+  </nav>
+    
+    
+    
+    
+    
+    
+    <span class="big-circle"></span>
+    <main>
+      <div class="box">
+        <div class="inner-box">
+          <div class="forms-wrap">
+            <form action="/login" method="post"  enctype="multipart/form-data"  onsubmit="showloading()" autocomplete="off" class="sign-in-form">
+              <div class="logo">
+                <img src="{{ url_for('static', filename='img/Signin_SignOut_img/logo.png') }}" alt="logo" />
+                <h3>APMAAS SYSTEMS</h3>
+              </div>
+             
+              <div class="heading">
+                <h2>Welcome Back</h2>
+                <h6>Not registred yet?</h6>
+                <a href="#" class="toggle">Sign up</a>
+              </div>
+
+              <div class="actual-form">
+                <div class="input-wrap">
+                  <input
+                    type="text"
+                    name="email"
+                    minlength="4"
+                    class="input-field"
+                    autocomplete="off"
+                    required
+                  />
+                  <label>Email</label>
+                </div>
+
+                <div class="input-wrap">
+                  <input
+                    type="password"
+                    minlength="4"
+                    name = "password"
+                    class="input-field"
+                    autocomplete="off"
+                    required
+                  />
+                  <label>Password</label>
+                </div>
+
+                <input type="submit" value="Sign In" class="sign-btn" />
+
+                <p class="text">
+                  Forgotten your password or you login datails?
+                  <a href="#">Get help</a> signing in
+                </p>
+              </div>
+            </form>
+
+            <form action="/register" method="post"  enctype="multipart/form-data"  onsubmit="showloading()" autocomplete="off" class="sign-up-form">
+              <div class="logo">
+                <img src="{{ url_for('static', filename='img/Signin_SignOut_img/logo.png') }}" alt="logo" />
+                <h3>APMAAS SYSTEMS</h3>
+              </div>
+
+              <div class="heading">
+                <h2>Get Started</h2>
+                <h6>Already have an account?</h6>
+                <a href="#" class="toggle">Sign in</a>
+              </div>
+
+              <div class="actual-form">
+                <div class="input-wrap">
+                  <input
+                    type="text"
+                    placeholder="ICT/19/001"
+                    name="index"
+                    maxlength="10"
+                    class="input-field"
+                    autocomplete="off"
+                    required
+                  />
+                  <label>Index No</label>
+                </div>
+                <div class="input-wrap">
+                  <input
+                    type="text"
+                    name="username"
+                    minlength="4"
+                    class="input-field"
+                    autocomplete="off"
+                    required
+                  />
+                  <label>Name</label>
+                </div>
+
+                <div class="input-wrap">
+                  <input
+                    type="email"
+                    name="email"
+                    class="input-field"
+                    autocomplete="off"
+                    required
+                  />
+                  <label>Email</label>
+                </div>
+
+                <div class="input-wrap">
+                  <input
+                    type="password"
+                    name="password"
+                    minlength="4"
+                    class="input-field"
+                    autocomplete="off"
+                    required
+                  />
+                  <label>Password</label>
+                </div>
+
+
+                <div class="container">
+                  
+                  <span class="faculty ">Faculty</span>
+               
+                  <div class="select-dropdown">
+                    <select name="faculty">
+                      <option value="Technology">Technology</option>
+                      <option value="Allied Health Sciences">Allied Health Sciences</option>
+                      <option value="Applied Sciences">Applied Sciences</option>
+                      <option value="Computing">Computing</option>
+                      <option value="Dental Sciences">Dental Sciences</option>
+                      <option value="Engineering">Engineering</option>
+                      <option value="Humanities and Social Sciences">Humanities and Social Sciences</option>
+                      <option value="Management Studies and Commerce">Management Studies and Commerce</option>
+                      <option value="Medical Sciences">Medical Sciences</option>
+                      <option value="Urban & Aquatic Bio resources">Urban & Aquatic Bio resources</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="container">
+                
+                  <span class="department">Department</span>
+                  <div class="select-dropdown">
+                    <select name="Department">
+                      <option value="BST">BST</option>
+                      <option value="EGT">EGT</option>
+                      <option value="ICT">ICT</option>
+                    </select>
+                  </div>
+                </div>
+
+
+                <div class="container">
+                  <span class="Currentbatch">Current Batch</span>
+                  <div class="select-dropdown">
+                    <select name="Currentbatch">
+                      <option value="Batch_1">Batch_1</option>
+                      <option value="Batch_2">Batch_2</option>
+                      <option value="Batch_3">Batch_3</option>
+                      <option value="Batch_4">Batch_4</option>
+                      <option value="Batch_5">Batch_5</option>
+                      <option value="Batch_6">Batch_6</option>
+                      <option value="Batch_7">Batch_7</option>
+                      <option value="Batch_8">Batch_8</option>
+                      <option value="Batch_9">Batch_9</option>
+                      <option value="Batch_10">Batch_10</option>
+                      <option value="Batch_11">Batch_11</option>
+                      <option value="Batch_12">Batch_12</option>
+                    </select>
+                  </div>
+                </div>
+
+                
+
+
+                <input type="submit" value="Sign Up" class="sign-btn" />
+
+                <p class="text">
+                  By signing up, I agree to the
+                  <a href="#">Terms of Services</a> and
+                  <a href="#">Privacy Policy</a>
+                </p>
+              </div>
+            </form>
+          </div>
+
+          <div class="carousel">
+            <div class="images-wrapper">
+              <img src="{{ url_for('static', filename='img/Signin_SignOut_img/slide01.png') }}" class="image img-1 show" alt="slide01 image" />
+              <img src="{{ url_for('static', filename='img/Signin_SignOut_img/slide03.png') }}" class="image img-2" alt="slide02 image " />
+              <img src="{{ url_for('static', filename='img/Signin_SignOut_img/slide02.png') }}" class="image img-3" alt="slide03 image" />
+            </div>
+
+            <div class="text-slider">
+              <div class="text-wrap">
+                <div class="text-group">
+                  <h2>Create your own profile</h2>
+                  <h2>Analyze your semester results</h2>
+                  <h2>Predict your future results</h2>
+                </div>
+              </div>
+
+              <div class="bullets">
+                <span class="active" data-value="1"></span>
+                <span data-value="2"></span>
+                <span data-value="3"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Javascript file -->
+
+    <script src="{{ url_for('static', filename='js/Signin_SignOut.js') }}"></script>
+  </body>
+</html>
